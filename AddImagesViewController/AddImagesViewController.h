@@ -13,18 +13,19 @@
 #import "AlbumImagesViewController.h"
 #import "AlbumsCollectionViewController.h"
 #import "SharedClass.h"
-@interface AddImagesViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *m_Button1;
-@property (weak, nonatomic) IBOutlet UIButton *m_Button2;
-- (IBAction)changeImageClicked:(id)sender;
-@property (weak, nonatomic) IBOutlet UIScrollView *m_ScrollView;
-- (IBAction)deleteImage:(id)sender;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *m_ActivityIndicator;
 
-@property (weak, nonatomic) IBOutlet UIButton *m_Button3;
-@property (weak, nonatomic) IBOutlet UIButton *m_Button4;
-@property (weak, nonatomic) IBOutlet UIButton *m_Button5;
-@property (weak, nonatomic) IBOutlet UIButton *m_Button6;
-@property(strong,nonatomic)NSMutableDictionary *m_ImagesDictionary;
-@property(nonatomic)BOOL isFirst;
+@interface AddImagesViewController : UIViewController
+
+@property (nonatomic, retain)   IBOutletCollection(UIButton)        NSArray * m_changeButtons;
+@property (nonatomic, retain)   IBOutletCollection(UIButton)        NSArray * m_deleteButtons;
+@property (nonatomic, retain)   IBOutletCollection(UIImageView)     NSArray * m_ImageViews;
+
+@property (weak, nonatomic)     IBOutlet    UIScrollView *              m_ScrollView;
+@property (weak, nonatomic)     IBOutlet    UIActivityIndicatorView *   m_ActivityIndicator;
+@property (strong,nonatomic)                NSMutableDictionary *       m_ImagesDictionary;
+@property (nonatomic)                       BOOL                        isFirst;
+
+- (IBAction)changeImageClicked:(id)sender;
+- (IBAction)deleteImage:(id)sender;
+
 @end

@@ -80,43 +80,28 @@
 {
     [self.m_ActivityIndicator startAnimating];
      m_ImagesDictionary=[[NSMutableDictionary alloc] initWithDictionary:[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"img"]];
+    int cnt = 0;
     for (int i=0; i<[m_ImagesDictionary count]; i++) {
-        
+        UIButton *btn = [self.m_changeButtons objectAtIndex:i];
         if ([[[m_ImagesDictionary objectForKey:[NSString stringWithFormat:@"image%i",i]] objectForKey:@"imageset"] isEqualToString:@"yes"]) {
-            for (UIButton *btn in self.m_ScrollView.subviews) {
-                if ([[btn class] isSubclassOfClass:[UIButton class]]) {
-                    if (btn.tag==i+10) {
-                         [btn setImage:[UIImage imageNamed:@"EditImage_Frame"] forState:UIControlStateNormal];
-                    }
-                }
-                
-            }
+            [btn setImage:[UIImage imageNamed:@"EditImage_Frame"] forState:UIControlStateNormal];
             
-            for (UIImageView *img in self.m_ScrollView.subviews) {
-                if ([[img class]isSubclassOfClass:[UIImageView class]]) {
-                    if (img.tag==i) {
-                        [img setImage:nil];
-                        [img setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[m_ImagesDictionary objectForKey:[NSString stringWithFormat:@"image%i",i]]objectForKey:@"url"]]] placeholderImage:[UIImage imageNamed:@"PrieviewImage"]];
-                    }
-                }
-            }
+            UIImageView *img = [self.m_ImageViews objectAtIndex:i];
+            [img setImage:nil];
+            [img setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[m_ImagesDictionary objectForKey:[NSString stringWithFormat:@"image%i",i]]objectForKey:@"url"]]] placeholderImage:[UIImage imageNamed:@"PrieviewImage"]];
+            cnt++;
         }
         else
         {
-            for (UIButton *butn in self.m_ScrollView.subviews) {
-                 if ([[butn class] isSubclassOfClass:[UIButton class]]) {
-                if (butn.tag==i+10) {
-                    [butn setImage:[UIImage imageNamed:@"Frame_Add"] forState:UIControlStateNormal];
-                    
-                }
-            }
-            }
- 
+            if (i == cnt)
+                [btn setImage:[UIImage imageNamed:@"Frame_Add"] forState:UIControlStateNormal];
+            else
+                [btn setHidden:YES];
         }
     }
     [self.m_ActivityIndicator stopAnimating];
-    
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

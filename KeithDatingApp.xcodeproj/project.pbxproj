@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4897B16C19174C8800F2C0B5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4897B16B19174C8800F2C0B5 /* FacebookSDK.framework */; };
 		BD006E1B186AF5FF00F50B79 /* SharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BD006E1A186AF5FF00F50B79 /* SharedClass.m */; };
 		BD2E209918641C8900A8A5EF /* AlbumImagesViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2E209818641C8900A8A5EF /* AlbumImagesViewController_iPhone4.xib */; };
 		BD2E209B18641D0E00A8A5EF /* AlbumsCollectionViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2E209A18641D0E00A8A5EF /* AlbumsCollectionViewController_iPhone4.xib */; };
@@ -26,6 +25,8 @@
 		BDDC6076187A9202005009ED /* ReplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6074187A9202005009ED /* ReplyViewController.xib */; };
 		BDDC6078187A9239005009ED /* ReplyViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */; };
 		BDFEE245187D3E5400F26A90 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DD5C60891917411000D8B1BE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5C60881917411000D8B1BE /* FacebookSDK.framework */; };
+		DDCD0C1B1918DEC600DE6677 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCD0C1A1918DEC600DE6677 /* next@2x.png */; };
 		E400ECD118BF6E92008B95E4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E400ECD018BF6E92008B95E4 /* AssetsLibrary.framework */; };
 		E4029C44188124AB007B567C /* Strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = E4029C43188124AB007B567C /* Strawberry.png */; };
 		E40356AF18C72949004D6EA5 /* CheckInDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40356AD18C72949004D6EA5 /* CheckInDetailsViewController.m */; };
@@ -250,7 +251,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4897B16B19174C8800F2C0B5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		BD006E19186AF5FE00F50B79 /* SharedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedClass.h; path = "Shared Class/SharedClass.h"; sourceTree = "<group>"; };
 		BD006E1A186AF5FF00F50B79 /* SharedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedClass.m; path = "Shared Class/SharedClass.m"; sourceTree = "<group>"; };
 		BD2E209818641C8900A8A5EF /* AlbumImagesViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumImagesViewController_iPhone4.xib; path = AlbumImagesViewController/AlbumImagesViewController_iPhone4.xib; sourceTree = "<group>"; };
@@ -279,6 +279,8 @@
 		BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReplyViewController_iPhone4.xib; path = ReplyViewController/ReplyViewController_iPhone4.xib; sourceTree = "<group>"; };
 		BDFEE243187D3E5400F26A90 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		DD5C60881917411000D8B1BE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		DDCD0C1A1918DEC600DE6677 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		E400ECD018BF6E92008B95E4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E4029C43188124AB007B567C /* Strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strawberry.png; sourceTree = "<group>"; };
 		E40356AC18C72949004D6EA5 /* CheckInDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInDetailsViewController.h; path = CheckInDetailsViewController/CheckInDetailsViewController.h; sourceTree = "<group>"; };
@@ -576,7 +578,7 @@
 				E40DC6C618E436E400B4CB32 /* GoogleMaps.framework in Frameworks */,
 				E41F04AD1851C0A500841146 /* AddressBook.framework in Frameworks */,
 				E4F14FC21850A97900307DF7 /* MapKit.framework in Frameworks */,
-				4897B16C19174C8800F2C0B5 /* FacebookSDK.framework in Frameworks */,
+				DD5C60891917411000D8B1BE /* FacebookSDK.framework in Frameworks */,
 				E404A20E184D9C0E00193CF9 /* CoreGraphics.framework in Frameworks */,
 				E404A210184D9C0E00193CF9 /* UIKit.framework in Frameworks */,
 				E404A20C184D9C0E00193CF9 /* Foundation.framework in Frameworks */,
@@ -725,7 +727,7 @@
 		E404A20A184D9C0E00193CF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4897B16B19174C8800F2C0B5 /* FacebookSDK.framework */,
+				DD5C60881917411000D8B1BE /* FacebookSDK.framework */,
 				E409F5A018FD0FF500725238 /* Security.framework */,
 				E40DC6CB18E4382300B4CB32 /* CoreText.framework */,
 				E40DC6C918E4380900B4CB32 /* AVFoundation.framework */,
@@ -1023,6 +1025,7 @@
 		E414581818966E81009A716D /* App Images */ = {
 			isa = PBXGroup;
 			children = (
+				DDCD0C1A1918DEC600DE6677 /* next@2x.png */,
 				E4AF91B2190966BC00DA81A4 /* Camera_ImageIcon.png */,
 				E4FB131519068227006A510D /* SlideImage.png */,
 				E4A6DAF618FFD1C80091D101 /* SplashScreen.png */,
@@ -1449,7 +1452,7 @@
 				ORGANIZATIONNAME = "Ankush Sharma";
 				TargetAttributes = {
 					E404A207184D9C0E00193CF9 = {
-						DevelopmentTeam = 9E4FPT7D96;
+						DevelopmentTeam = 376Y7CT3NK;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 1;
@@ -1510,6 +1513,7 @@
 				E45FDE9C18E19FA3003220E6 /* CheckInUsersTableViewController.xib in Resources */,
 				E404A2FF184DF0B900193CF9 /* MapViewController_iPhone4.xib in Resources */,
 				E404A2D7184DA80400193CF9 /* white-dot.png in Resources */,
+				DDCD0C1B1918DEC600DE6677 /* next@2x.png in Resources */,
 				E409F6CB18FD10E700725238 /* Flurry_AppSpot_Publisher_Platform_TOS.pdf in Resources */,
 				E4AFAB6B1897B83600AFC497 /* DetailedSettingsViewController.xib in Resources */,
 				E4FFB84318ACE17D00086EF6 /* slider-default_trackBackground@2x.png in Resources */,
@@ -1820,8 +1824,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Amaneet Brar (9E4FPT7D96)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amaneet Brar (9E4FPT7D96)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/3\\ \\ December\\ 2013/KeithDatingApp",
@@ -1836,11 +1840,12 @@
 					"/Users/mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/March/27\\ March\\ 2014/KeithDatingApp",
 					/Users/rakeshsaini/Documents/ANKUSH/Projects/AppStore/KeithDatingApp,
 					/Users/baljindersingh/Downloads/KeithDatingApp,
+					/Users/YangYang/Git/Fondoo,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeithDatingApp/KeithDatingApp-Prefix.pch";
 				INFOPLIST_FILE = "KeithDatingApp/KeithDatingApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flurry",
@@ -1849,7 +1854,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Fondoo;
-				PROVISIONING_PROFILE = "9DAE9726-6B2F-4162-ACE2-5B769F631026";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1860,8 +1865,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Amaneet Brar (9E4FPT7D96)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Amaneet Brar (9E4FPT7D96)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/3\\ \\ December\\ 2013/KeithDatingApp",
@@ -1876,11 +1881,12 @@
 					"/Users/mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/March/27\\ March\\ 2014/KeithDatingApp",
 					/Users/rakeshsaini/Documents/ANKUSH/Projects/AppStore/KeithDatingApp,
 					/Users/baljindersingh/Downloads/KeithDatingApp,
+					/Users/YangYang/Git/Fondoo,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeithDatingApp/KeithDatingApp-Prefix.pch";
 				INFOPLIST_FILE = "KeithDatingApp/KeithDatingApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flurry",
@@ -1889,7 +1895,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Fondoo;
-				PROVISIONING_PROFILE = "9DAE9726-6B2F-4162-ACE2-5B769F631026";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
 
-    m_HeadingArray=[[NSArray alloc] initWithObjects:@"I am interested in",@"That live within",@"Within the age group",@"A bit about me",@"My profile pictures", nil];
+    m_HeadingArray=[[NSArray alloc] initWithObjects:@"I like...",@"That live within",@"Within the age group",@"A bit about me", @"Bio", @"Edit Photos", nil];
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"screen"]==568) {
          [self.m_SetupScrollView setContentSize:CGSizeMake(320*5, kBasicScrollHeight_iPhone5-100)];
     }
@@ -62,7 +62,7 @@
 {
     headingLabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 6, 320, 50)];
     headingLabel.textAlignment=NSTextAlignmentCenter;
-    [headingLabel setFont:[UIFont systemFontOfSize:19]];
+    [headingLabel setFont:[UIFont fontWithName:@"Helvetica" size:19]];
     [headingLabel setTextColor:kRedColor];
     [headingLabel setText:[self.m_HeadingArray objectAtIndex:0]];
 
@@ -160,6 +160,7 @@
             [headingLabel setText:[self.m_HeadingArray objectAtIndex:4]];
             break;
         case 4:
+            [headingLabel setText:[self.m_HeadingArray objectAtIndex:5]];
             break;
         default:
             break;
