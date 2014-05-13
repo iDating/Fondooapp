@@ -7,6 +7,9 @@
 //
 
 #import "AccountSettingsViewController.h"
+
+#import "ProfilePhotoViewController.h"
+
 @interface AccountSettingsViewController ()
 
 @end
@@ -302,17 +305,23 @@
 }
 -(void)editPhotosClicked
 {
-    AddImagesViewController *addVC;
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"screen"]==568) {
-        addVC=[[AddImagesViewController alloc] initWithNibName:@"AddImagesViewController" bundle:nil];
-    }
-    else
-    {
-        addVC=[[AddImagesViewController alloc] initWithNibName:@"AddImagesViewController_iPhone4" bundle:nil];
-    }
-    addVC.hidesBottomBarWhenPushed=YES;
+//    AddImagesViewController *addVC;
+//    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"screen"]==568) {
+//        addVC=[[AddImagesViewController alloc] initWithNibName:@"AddImagesViewController" bundle:nil];
+//    }
+//    else
+//    {
+//        addVC=[[AddImagesViewController alloc] initWithNibName:@"AddImagesViewController_iPhone4" bundle:nil];
+//    }
+//    addVC.hidesBottomBarWhenPushed=YES;
+//    [self.navigationController pushViewController:addVC animated:YES];
+    
+    ProfilePhotoViewController *addVC = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
+    addVC.hidesBottomBarWhenPushed = YES;
+    addVC.fromSettings = YES;
     [self.navigationController pushViewController:addVC animated:YES];
 }
+
 -(void)ageButtonClicked
 {
     

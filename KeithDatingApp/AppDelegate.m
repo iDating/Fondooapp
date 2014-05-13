@@ -12,6 +12,7 @@
 #import "MapViewController.h"
 #import "MessageViewController.h"
 #import "AccountViewController.h"
+#import "ILikeViewController.h"
 
 #import <FacebookSDK/FacebookSDK.h>
 #import <GoogleMaps/GoogleMaps.h>
@@ -32,6 +33,8 @@
     
     // Replace YOUR_API_KEY with the api key in the downloaded package
     [Flurry startSession:kFlurryAPIKey];
+    
+    [self setupNavigationBar];
     
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      
@@ -62,6 +65,17 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void) setupNavigationBar
+{
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           kRedColor,
+                                                           NSForegroundColorAttributeName,
+                                                           nil, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"Helvetica Neue" size:20.0],
+                                                           NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 -(void)stopTimer
@@ -274,17 +288,16 @@ acctNav.tabBarItem.imageInsets=UIEdgeInsetsMake(5, 0, -5, 0);
 
 -(void)initializeBasicSetup
 {
-    BasicSetupViewController *basicSetupVC;
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"screen"]==568) {
-        basicSetupVC =[[BasicSetupViewController alloc] initWithNibName:@"BasicSetupViewController" bundle:nil];
-    }
-    else
-    {
-        basicSetupVC =[[BasicSetupViewController alloc] initWithNibName:@"BasicSetupViewController_iPhone4" bundle:nil];
-    }
-    self.window.rootViewController=basicSetupVC;
-  
+//    BasicSetupViewController *vc = [[BasicSetupViewController alloc] initWithNibName:@"BasicSetupViewController_iPhone4" bundle:nil];
+//    self.window.rootViewController = vc;
+//    
+//    return;
+    
+    ILikeViewController *iLikeVC = [[ILikeViewController alloc] initWithNibName:@"ILikeViewController" bundle:nil];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:iLikeVC];
+    self.window.rootViewController = navigationVC;
 }
+
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication

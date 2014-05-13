@@ -28,6 +28,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
     if (isFirst==NO) {
         
     [self.m_ActivityIndicator startAnimating];
@@ -40,7 +41,8 @@
         isFirst=NO;
     }
     [self performSelector:@selector(endEditingView) withObject:nil afterDelay:0.01];
-   }
+}
+
 -(void)endEditingView
 {
     [self.view endEditing:YES];

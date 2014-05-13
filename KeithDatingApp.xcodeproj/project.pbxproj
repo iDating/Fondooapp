@@ -25,7 +25,35 @@
 		BDDC6076187A9202005009ED /* ReplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6074187A9202005009ED /* ReplyViewController.xib */; };
 		BDDC6078187A9239005009ED /* ReplyViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */; };
 		BDFEE245187D3E5400F26A90 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DD2567891921AADA00CDDBD4 /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2567881921AADA00CDDBD4 /* RangeSlider.m */; };
+		DD2567931921B07700CDDBD4 /* bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678B1921B07700CDDBD4 /* bar-background.png */; };
+		DD2567941921B07700CDDBD4 /* bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678C1921B07700CDDBD4 /* bar-background@2x.png */; };
+		DD2567951921B07700CDDBD4 /* bar-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678D1921B07700CDDBD4 /* bar-highlight.png */; };
+		DD2567961921B07700CDDBD4 /* bar-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678E1921B07700CDDBD4 /* bar-highlight@2x.png */; };
+		DD2567971921B07700CDDBD4 /* handle-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678F1921B07700CDDBD4 /* handle-hover.png */; };
+		DD2567981921B07700CDDBD4 /* handle-hover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567901921B07700CDDBD4 /* handle-hover@2x.png */; };
+		DD2567991921B07700CDDBD4 /* handle.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567911921B07700CDDBD4 /* handle.png */; };
+		DD25679A1921B07700CDDBD4 /* handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567921921B07700CDDBD4 /* handle@2x.png */; };
+		DD2567A41922072700CDDBD4 /* photo_close.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25679C1922072700CDDBD4 /* photo_close.png */; };
+		DD2567A51922072700CDDBD4 /* photo_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25679D1922072700CDDBD4 /* photo_close@2x.png */; };
+		DD2567A61922072700CDDBD4 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25679E1922072700CDDBD4 /* photo_frame.png */; };
+		DD2567A71922072700CDDBD4 /* photo_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25679F1922072700CDDBD4 /* photo_frame@2x.png */; };
+		DD2567A81922072700CDDBD4 /* photoadd_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A01922072700CDDBD4 /* photoadd_frame.png */; };
+		DD2567A91922072700CDDBD4 /* photoadd_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A11922072700CDDBD4 /* photoadd_frame@2x.png */; };
+		DD2567AA1922072700CDDBD4 /* photoplace_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A21922072700CDDBD4 /* photoplace_frame.png */; };
+		DD2567AB1922072700CDDBD4 /* photoplace_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A31922072700CDDBD4 /* photoplace_frame@2x.png */; };
 		DD5C60891917411000D8B1BE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5C60881917411000D8B1BE /* FacebookSDK.framework */; };
+		DD915E7A19225143000F8DA7 /* WebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD915E7919225143000F8DA7 /* WebClient.m */; };
+		DDB68FB9191DB531000BD37A /* ILikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FB7191DB531000BD37A /* ILikeViewController.m */; };
+		DDB68FBA191DB531000BD37A /* ILikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FB8191DB531000BD37A /* ILikeViewController.xib */; };
+		DDB68FC3191DC4A0000BD37A /* AgeGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FC1191DC4A0000BD37A /* AgeGroupViewController.m */; };
+		DDB68FC4191DC4A0000BD37A /* AgeGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FC2191DC4A0000BD37A /* AgeGroupViewController.xib */; };
+		DDB68FC8191DC4C9000BD37A /* BioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FC6191DC4C9000BD37A /* BioViewController.m */; };
+		DDB68FC9191DC4C9000BD37A /* BioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FC7191DC4C9000BD37A /* BioViewController.xib */; };
+		DDB68FCD191DC4E1000BD37A /* ProfilePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FCB191DC4E1000BD37A /* ProfilePhotoViewController.m */; };
+		DDB68FCE191DC4E1000BD37A /* ProfilePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FCC191DC4E1000BD37A /* ProfilePhotoViewController.xib */; };
+		DDB68FD2191DC570000BD37A /* LiveWithinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FD0191DC570000BD37A /* LiveWithinViewController.m */; };
+		DDB68FD3191DC570000BD37A /* LiveWithinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FD1191DC570000BD37A /* LiveWithinViewController.xib */; };
 		DDCD0C1B1918DEC600DE6677 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCD0C1A1918DEC600DE6677 /* next@2x.png */; };
 		E400ECD118BF6E92008B95E4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E400ECD018BF6E92008B95E4 /* AssetsLibrary.framework */; };
 		E4029C44188124AB007B567C /* Strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = E4029C43188124AB007B567C /* Strawberry.png */; };
@@ -279,7 +307,42 @@
 		BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReplyViewController_iPhone4.xib; path = ReplyViewController/ReplyViewController_iPhone4.xib; sourceTree = "<group>"; };
 		BDFEE243187D3E5400F26A90 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		DD2567871921AADA00CDDBD4 /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
+		DD2567881921AADA00CDDBD4 /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
+		DD25678B1921B07700CDDBD4 /* bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-background.png"; sourceTree = "<group>"; };
+		DD25678C1921B07700CDDBD4 /* bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-background@2x.png"; sourceTree = "<group>"; };
+		DD25678D1921B07700CDDBD4 /* bar-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-highlight.png"; sourceTree = "<group>"; };
+		DD25678E1921B07700CDDBD4 /* bar-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-highlight@2x.png"; sourceTree = "<group>"; };
+		DD25678F1921B07700CDDBD4 /* handle-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle-hover.png"; sourceTree = "<group>"; };
+		DD2567901921B07700CDDBD4 /* handle-hover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle-hover@2x.png"; sourceTree = "<group>"; };
+		DD2567911921B07700CDDBD4 /* handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handle.png; sourceTree = "<group>"; };
+		DD2567921921B07700CDDBD4 /* handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handle@2x.png"; sourceTree = "<group>"; };
+		DD25679C1922072700CDDBD4 /* photo_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_close.png; sourceTree = "<group>"; };
+		DD25679D1922072700CDDBD4 /* photo_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_close@2x.png"; sourceTree = "<group>"; };
+		DD25679E1922072700CDDBD4 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_frame.png; sourceTree = "<group>"; };
+		DD25679F1922072700CDDBD4 /* photo_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_frame@2x.png"; sourceTree = "<group>"; };
+		DD2567A01922072700CDDBD4 /* photoadd_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoadd_frame.png; sourceTree = "<group>"; };
+		DD2567A11922072700CDDBD4 /* photoadd_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoadd_frame@2x.png"; sourceTree = "<group>"; };
+		DD2567A21922072700CDDBD4 /* photoplace_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoplace_frame.png; sourceTree = "<group>"; };
+		DD2567A31922072700CDDBD4 /* photoplace_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoplace_frame@2x.png"; sourceTree = "<group>"; };
 		DD5C60881917411000D8B1BE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		DD915E7819225143000F8DA7 /* WebClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebClient.h; sourceTree = "<group>"; };
+		DD915E7919225143000F8DA7 /* WebClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebClient.m; sourceTree = "<group>"; };
+		DDB68FB6191DB531000BD37A /* ILikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILikeViewController.h; sourceTree = "<group>"; };
+		DDB68FB7191DB531000BD37A /* ILikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILikeViewController.m; sourceTree = "<group>"; };
+		DDB68FB8191DB531000BD37A /* ILikeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILikeViewController.xib; sourceTree = "<group>"; };
+		DDB68FC0191DC4A0000BD37A /* AgeGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgeGroupViewController.h; sourceTree = "<group>"; };
+		DDB68FC1191DC4A0000BD37A /* AgeGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgeGroupViewController.m; sourceTree = "<group>"; };
+		DDB68FC2191DC4A0000BD37A /* AgeGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgeGroupViewController.xib; sourceTree = "<group>"; };
+		DDB68FC5191DC4C9000BD37A /* BioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BioViewController.h; sourceTree = "<group>"; };
+		DDB68FC6191DC4C9000BD37A /* BioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BioViewController.m; sourceTree = "<group>"; };
+		DDB68FC7191DC4C9000BD37A /* BioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BioViewController.xib; sourceTree = "<group>"; };
+		DDB68FCA191DC4E1000BD37A /* ProfilePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePhotoViewController.h; sourceTree = "<group>"; };
+		DDB68FCB191DC4E1000BD37A /* ProfilePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePhotoViewController.m; sourceTree = "<group>"; };
+		DDB68FCC191DC4E1000BD37A /* ProfilePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePhotoViewController.xib; sourceTree = "<group>"; };
+		DDB68FCF191DC570000BD37A /* LiveWithinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveWithinViewController.h; sourceTree = "<group>"; };
+		DDB68FD0191DC570000BD37A /* LiveWithinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveWithinViewController.m; sourceTree = "<group>"; };
+		DDB68FD1191DC570000BD37A /* LiveWithinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveWithinViewController.xib; sourceTree = "<group>"; };
 		DDCD0C1A1918DEC600DE6677 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		E400ECD018BF6E92008B95E4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E4029C43188124AB007B567C /* Strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strawberry.png; sourceTree = "<group>"; };
@@ -659,6 +722,79 @@
 			name = ReplyViewController;
 			sourceTree = "<group>";
 		};
+		DD2567861921AADA00CDDBD4 /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				DD25678A1921B07700CDDBD4 /* Images */,
+				DD2567871921AADA00CDDBD4 /* RangeSlider.h */,
+				DD2567881921AADA00CDDBD4 /* RangeSlider.m */,
+			);
+			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		DD25678A1921B07700CDDBD4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DD25678B1921B07700CDDBD4 /* bar-background.png */,
+				DD25678C1921B07700CDDBD4 /* bar-background@2x.png */,
+				DD25678D1921B07700CDDBD4 /* bar-highlight.png */,
+				DD25678E1921B07700CDDBD4 /* bar-highlight@2x.png */,
+				DD25678F1921B07700CDDBD4 /* handle-hover.png */,
+				DD2567901921B07700CDDBD4 /* handle-hover@2x.png */,
+				DD2567911921B07700CDDBD4 /* handle.png */,
+				DD2567921921B07700CDDBD4 /* handle@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DD25679B1922072700CDDBD4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DD25679C1922072700CDDBD4 /* photo_close.png */,
+				DD25679D1922072700CDDBD4 /* photo_close@2x.png */,
+				DD25679E1922072700CDDBD4 /* photo_frame.png */,
+				DD25679F1922072700CDDBD4 /* photo_frame@2x.png */,
+				DD2567A01922072700CDDBD4 /* photoadd_frame.png */,
+				DD2567A11922072700CDDBD4 /* photoadd_frame@2x.png */,
+				DD2567A21922072700CDDBD4 /* photoplace_frame.png */,
+				DD2567A31922072700CDDBD4 /* photoplace_frame@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		DD915E7719225122000F8DA7 /* WebClient */ = {
+			isa = PBXGroup;
+			children = (
+				DD915E7819225143000F8DA7 /* WebClient.h */,
+				DD915E7919225143000F8DA7 /* WebClient.m */,
+			);
+			path = WebClient;
+			sourceTree = SOURCE_ROOT;
+		};
+		DDB68FB5191DB50A000BD37A /* SetupViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD25679B1922072700CDDBD4 /* image */,
+				DD2567861921AADA00CDDBD4 /* RangeSlider */,
+				DDB68FB6191DB531000BD37A /* ILikeViewController.h */,
+				DDB68FB7191DB531000BD37A /* ILikeViewController.m */,
+				DDB68FB8191DB531000BD37A /* ILikeViewController.xib */,
+				DDB68FCF191DC570000BD37A /* LiveWithinViewController.h */,
+				DDB68FD0191DC570000BD37A /* LiveWithinViewController.m */,
+				DDB68FD1191DC570000BD37A /* LiveWithinViewController.xib */,
+				DDB68FC0191DC4A0000BD37A /* AgeGroupViewController.h */,
+				DDB68FC1191DC4A0000BD37A /* AgeGroupViewController.m */,
+				DDB68FC2191DC4A0000BD37A /* AgeGroupViewController.xib */,
+				DDB68FC5191DC4C9000BD37A /* BioViewController.h */,
+				DDB68FC6191DC4C9000BD37A /* BioViewController.m */,
+				DDB68FC7191DC4C9000BD37A /* BioViewController.xib */,
+				DDB68FCA191DC4E1000BD37A /* ProfilePhotoViewController.h */,
+				DDB68FCB191DC4E1000BD37A /* ProfilePhotoViewController.m */,
+				DDB68FCC191DC4E1000BD37A /* ProfilePhotoViewController.xib */,
+			);
+			path = SetupViewControllers;
+			sourceTree = "<group>";
+		};
 		E40356AB18C72923004D6EA5 /* CheckInDetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,7 +843,9 @@
 				E49FF7451859772000E05AAC /* PostStatusUpdateViewController */,
 				E404A2DC184DC45800193CF9 /* FeedViewController */,
 				E4B17E1618B354620043EAD3 /* BasicSetupViewController */,
+				DDB68FB5191DB50A000BD37A /* SetupViewControllers */,
 				E404A246184D9C7000193CF9 /* IntroViewController */,
+				DD915E7719225122000F8DA7 /* WebClient */,
 				E404A213184D9C0E00193CF9 /* KeithDatingApp */,
 				E404A230184D9C0F00193CF9 /* KeithDatingAppTests */,
 				E404A20A184D9C0E00193CF9 /* Frameworks */,
@@ -1507,20 +1645,31 @@
 				E4AF91B71909695400DA81A4 /* Phone_Icon@2x.png in Resources */,
 				E4029C44188124AB007B567C /* Strawberry.png in Resources */,
 				E404A2F5184DCA7600193CF9 /* IntroViewController_iPhone4.xib in Resources */,
+				DD2567991921B07700CDDBD4 /* handle.png in Resources */,
 				E404A2ED184DC90000193CF9 /* MessageViewController.xib in Resources */,
+				DD2567A41922072700CDDBD4 /* photo_close.png in Resources */,
+				DD2567951921B07700CDDBD4 /* bar-highlight.png in Resources */,
+				DDB68FCE191DC4E1000BD37A /* ProfilePhotoViewController.xib in Resources */,
 				E404A2D3184DA80400193CF9 /* iphone.png in Resources */,
 				E447C595187E9C6A0021A6D3 /* ConversationViewController.xib in Resources */,
 				E45FDE9C18E19FA3003220E6 /* CheckInUsersTableViewController.xib in Resources */,
+				DD2567941921B07700CDDBD4 /* bar-background@2x.png in Resources */,
 				E404A2FF184DF0B900193CF9 /* MapViewController_iPhone4.xib in Resources */,
 				E404A2D7184DA80400193CF9 /* white-dot.png in Resources */,
 				DDCD0C1B1918DEC600DE6677 /* next@2x.png in Resources */,
 				E409F6CB18FD10E700725238 /* Flurry_AppSpot_Publisher_Platform_TOS.pdf in Resources */,
+				DD2567A81922072700CDDBD4 /* photoadd_frame.png in Resources */,
 				E4AFAB6B1897B83600AFC497 /* DetailedSettingsViewController.xib in Resources */,
+				DD2567A91922072700CDDBD4 /* photoadd_frame@2x.png in Resources */,
 				E4FFB84318ACE17D00086EF6 /* slider-default_trackBackground@2x.png in Resources */,
+				DD25679A1921B07700CDDBD4 /* handle@2x.png in Resources */,
 				BD2E209B18641D0E00A8A5EF /* AlbumsCollectionViewController_iPhone4.xib in Resources */,
+				DD2567931921B07700CDDBD4 /* bar-background.png in Resources */,
 				E414587618966E82009A716D /* fb--bg.png in Resources */,
 				E4461D8B185B219600E8E69E /* AlbumsCollectionViewController.xib in Resources */,
 				E4EAF9F0189BA31C003086B5 /* bubbleSomeone.png in Resources */,
+				DD2567981921B07700CDDBD4 /* handle-hover@2x.png in Resources */,
+				DDB68FC9191DC4C9000BD37A /* BioViewController.xib in Resources */,
 				E4AF91B01909667000DA81A4 /* Chat_UnSelected@2x.png in Resources */,
 				E4FB131619068227006A510D /* SlideImage.png in Resources */,
 				E414586318966E82009A716D /* Close_Icon.png in Resources */,
@@ -1532,6 +1681,7 @@
 				E4AFAB6D1897B84B00AFC497 /* DetailedSettingsViewController_iPhone4.xib in Resources */,
 				E414586218966E82009A716D /* Camera_Icon.png in Resources */,
 				E404A2A7184DA80300193CF9 /* text-field.png in Resources */,
+				DDB68FD3191DC570000BD37A /* LiveWithinViewController.xib in Resources */,
 				E4FFB83F18ACE17D00086EF6 /* slider-default-track@2x.png in Resources */,
 				E4E00FC218FB99C4004EF170 /* FoursquareLogo.png in Resources */,
 				E472D9E2188573AE00F8D906 /* comment0white@2x.png in Resources */,
@@ -1543,6 +1693,7 @@
 				E404A2D0184DA80400193CF9 /* Background.png in Resources */,
 				E4AFAB7B1897E1E900AFC497 /* AddImagesViewController.xib in Resources */,
 				E4AFAB731897B96B00AFC497 /* BioEditViewController.xib in Resources */,
+				DDB68FC4191DC4A0000BD37A /* AgeGroupViewController.xib in Resources */,
 				BDDC6076187A9202005009ED /* ReplyViewController.xib in Resources */,
 				E4EAF9EA189BA0B6003086B5 /* bubbleMine.png in Resources */,
 				E4AF91BA19096C8B00DA81A4 /* Map_Selected@2x.png in Resources */,
@@ -1562,6 +1713,7 @@
 				E4145884189674DE009A716D /* PreviewPostImageFrame.png in Resources */,
 				E4FFB83B18ACE17D00086EF6 /* slider-default-handle-highlighted@2x.png in Resources */,
 				E414586818966E82009A716D /* pin.png in Resources */,
+				DD2567961921B07700CDDBD4 /* bar-highlight@2x.png in Resources */,
 				E4145883189674DE009A716D /* PreviewFrame.png in Resources */,
 				E4AF91AF1909667000DA81A4 /* Account_UnSelected@2x.png in Resources */,
 				E4FFB83A18ACE17D00086EF6 /* slider-default-handle-highlighted.png in Resources */,
@@ -1569,19 +1721,24 @@
 				E48C7E0C1898D48E00EA9D8A /* Red_PinIcon@2x.png in Resources */,
 				E409F6C918FD10E700725238 /* Flurry-LICENSE.txt in Resources */,
 				E404A29D184DA80300193CF9 /* avatar.png in Resources */,
+				DD2567A71922072700CDDBD4 /* photo_frame@2x.png in Resources */,
 				E404A2D2184DA80400193CF9 /* facebook-button.png in Resources */,
 				E4FFB83E18ACE17D00086EF6 /* slider-default-track.png in Resources */,
+				DD2567AA1922072700CDDBD4 /* photoplace_frame.png in Resources */,
 				E404A2D4184DA80400193CF9 /* red-dot.png in Resources */,
 				E4FFB84818ACF2DD00086EF6 /* BlackTint@2x.png in Resources */,
 				E48C7E0E1898D5A000EA9D8A /* Frame_Add.png in Resources */,
+				DD2567971921B07700CDDBD4 /* handle-hover.png in Resources */,
 				E4AF91AA1909667000DA81A4 /* Account_Selected@2x.png in Resources */,
 				E404A2AC184DA80300193CF9 /* avatar-feed.png in Resources */,
 				E404A2CC184DA80400193CF9 /* girl-pic.png in Resources */,
 				E4AF91AD1909667000DA81A4 /* Add_Button@2x.png in Resources */,
 				E414585418966E82009A716D /* Map_Pin@2x.png in Resources */,
+				DD2567A61922072700CDDBD4 /* photo_frame.png in Resources */,
 				E4145880189674DE009A716D /* EditImage_Frame.png in Resources */,
 				E414586018966E82009A716D /* back@2x.png in Resources */,
 				E414587718966E82009A716D /* IphoneImage@2x.png in Resources */,
+				DDB68FBA191DB531000BD37A /* ILikeViewController.xib in Resources */,
 				E49FF74A1859780500E05AAC /* PostStatusViewController.xib in Resources */,
 				E4AF91BB19096C8B00DA81A4 /* Feed_Unselected@2x.png in Resources */,
 				E4AFAB871897FA4000AFC497 /* User_Icon@2x.png in Resources */,
@@ -1606,11 +1763,13 @@
 				E41458151896392C009A716D /* AccountSettingsViewController.xib in Resources */,
 				E404A223184D9C0E00193CF9 /* Images.xcassets in Resources */,
 				E4AFAB751897B97B00AFC497 /* BioEditViewController_iPhone4.xib in Resources */,
+				DD2567AB1922072700CDDBD4 /* photoplace_frame@2x.png in Resources */,
 				E40A3D4818D30D28004E55DB /* Close_Button.png in Resources */,
 				E404A2E7184DC82200193CF9 /* MapViewController.xib in Resources */,
 				BD3E6BAA18769B40003757C8 /* UserDetailsViewController_iPhone4.xib in Resources */,
 				E414586418966E82009A716D /* Pin_Map.png in Resources */,
 				E409F6C818FD10E700725238 /* Flurry AppSpot Publisher Platform TOS FINAL August 1, 2012.pdf in Resources */,
+				DD2567A51922072700CDDBD4 /* photo_close@2x.png in Resources */,
 				BDD6620F187AB8BD001CEBCB /* PostImage.png in Resources */,
 				E4FFB84918ACF2DD00086EF6 /* ThumbCircle@2x.png in Resources */,
 				E4AFAB861897FA4000AFC497 /* Camera_IconRed.png in Resources */,
@@ -1648,12 +1807,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB68FB9191DB531000BD37A /* ILikeViewController.m in Sources */,
 				E4E7BE2B18D89E8900723D0F /* UIImage+UIImage_fixOrientation.m in Sources */,
 				E4B17E1A18B354830043EAD3 /* BasicSetupViewController.m in Sources */,
 				E4461D8A185B219600E8E69E /* AlbumsCollectionViewController.m in Sources */,
+				DDB68FD2191DC570000BD37A /* LiveWithinViewController.m in Sources */,
 				BD6D40381862E1D90097526F /* AlbumImagesViewController.m in Sources */,
 				E4AFAB6A1897B83600AFC497 /* DetailedSettingsViewController.m in Sources */,
 				E4FBFE8018BCF94600F2DF10 /* UIBubbleTableViewCell.m in Sources */,
+				DDB68FC8191DC4C9000BD37A /* BioViewController.m in Sources */,
 				E404A221184D9C0E00193CF9 /* KeithDatingApp.xcdatamodeld in Sources */,
 				E4FBFE7E18BCF94600F2DF10 /* UIBubbleHeaderTableViewCell.m in Sources */,
 				E404A2E0184DC48400193CF9 /* FeedViewController.m in Sources */,
@@ -1661,6 +1823,7 @@
 				E4F79D1F184F32B7008964D9 /* NSData+Base64.m in Sources */,
 				E404A2E6184DC82200193CF9 /* MapViewController.m in Sources */,
 				E40437AF18892BDD00021794 /* Reachability.m in Sources */,
+				DDB68FC3191DC4A0000BD37A /* AgeGroupViewController.m in Sources */,
 				E4F79D24184F32B7008964D9 /* SBJsonParser.m in Sources */,
 				BD6DF693187D5FCA0088FF39 /* ImageCacheObject.m in Sources */,
 				E49FF7611859E12600E05AAC /* SDWebImageDecoder.m in Sources */,
@@ -1668,8 +1831,11 @@
 				E404A21E184D9C0E00193CF9 /* AppDelegate.m in Sources */,
 				E48AE72B18C48B1F00EE00B8 /* UIImage+Resize.m in Sources */,
 				E4461D81185B212A00E8E69E /* CollectionViewCell.m in Sources */,
+				DDB68FCD191DC4E1000BD37A /* ProfilePhotoViewController.m in Sources */,
 				E404A2F2184DC92F00193CF9 /* AccountViewController.m in Sources */,
+				DD2567891921AADA00CDDBD4 /* RangeSlider.m in Sources */,
 				E49FF7661859E12600E05AAC /* UIImageView+WebCache.m in Sources */,
+				DD915E7A19225143000F8DA7 /* WebClient.m in Sources */,
 				E4F79D23184F32B7008964D9 /* SBJsonBase.m in Sources */,
 				BDFEE245187D3E5400F26A90 /* EGORefreshTableHeaderView.m in Sources */,
 				E4FFB82E18ACD77B00086EF6 /* NMRangeSlider.m in Sources */,

@@ -110,6 +110,7 @@
 #define kLocationType @"&locationtype="
 
 #define kRedColor [UIColor colorWithRed:(235.0f/255.0f) green:(92.0f/255.0f) blue:(83.0f/255.0f) alpha:0.9f]
+#define kDarkGrayColor [UIColor blackColor]
 #define kGrayColor [UIColor colorWithRed:(130.0f/255.0f) green:(139.0f/255.0f) blue:(150.0f/255.0f) alpha:0.9f]
 #define kLightGray [UIColor colorWithRed:127.0/255.0 green:127.0/255.0 blue:127.0/255.0 alpha:1.0f]
 #define kSeaGreenColor [UIColor colorWithRed:69.0/255.0 green:137.0/255.0 blue:174.0/255.0 alpha:1.0f]

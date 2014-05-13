@@ -117,7 +117,7 @@
             self.m_AgeSlider.upperValue=[[ageArray objectAtIndex:1] floatValue];
             
             
-            [self.m_DetailedTableView setFrame:CGRectMake(0, 0, 320, 60*2)];
+            //[self.m_DetailedTableView setFrame:CGRectMake(0, 0, 320, 60*2)];
             break;
             
         default:
