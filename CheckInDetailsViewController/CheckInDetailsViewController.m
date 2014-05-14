@@ -39,9 +39,9 @@
     [self.navigationController.navigationBar setHidden:NO];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : kRedColor}];
-    UILabel *MainTitle=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 28)];
+    UILabel *MainTitle=[[UILabel alloc] initWithFrame:CGRectMake(0, 8, 200, 28)];
     MainTitle.textAlignment=NSTextAlignmentCenter;
-    [MainTitle setFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:15.0]];
+    [MainTitle setFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:17.0]];
     [MainTitle setTextColor:kRedColor];
     
     UILabel *descriptionTitle=[[UILabel alloc] initWithFrame:CGRectMake(0, 28, 200, 16)];
@@ -49,7 +49,7 @@
     [descriptionTitle setTextColor:kGrayColor];
     [descriptionTitle setFont:[UIFont fontWithName:@"Helvetica-Light" size:12.0f]];
     MainTitle.text=[[m_CheckInDetailDictionary objectAtIndex:0] objectForKey:@"address"];
-    UIView *TitleView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    UIView *TitleView=[[UIView alloc] initWithFrame:CGRectMake(0, 60, 200, 44)];
     [TitleView setBackgroundColor:[UIColor clearColor]];
     [TitleView addSubview:MainTitle];
     [TitleView addSubview:descriptionTitle];

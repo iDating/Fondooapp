@@ -33,7 +33,9 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setHidden:NO];
     m_Shared=[SharedClass sharedInstance];
+    
     [self setNav];
+    
     [self.m_ActivityIndicator startAnimating];
     
     self.m_locationManager = [[CLLocationManager alloc] init];
@@ -42,8 +44,7 @@
     self.m_locationManager.distanceFilter = kCLDistanceFilterNone;
     [self.m_locationManager startUpdatingLocation];
     CLLocation *location = [self.m_locationManager location];
-    // Configure the new event with information from the location
-    CLLocationCoordinate2D coordinate = [location coordinate];
+       CLLocationCoordinate2D coordinate = [location coordinate];
     
     self.m_Latitude=coordinate.longitude;
     self.m_Longitude=coordinate.latitude;
@@ -127,7 +128,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSLog(@" dict : %@",[self.m_PlacesDictionary objectAtIndex:indexPath.row]);
+  
     [m_Shared setM_FoursquareID:[[self.m_PlacesDictionary objectAtIndex:indexPath.row] objectForKey:@"id"]];
     [m_Shared setM_FourSquareLattitude:[[[self.m_PlacesDictionary objectAtIndex:indexPath.row] objectForKey:@"location"] objectForKey:@"lat"]];
     [m_Shared setM_FourSquareLongitude:[[[self.m_PlacesDictionary objectAtIndex:indexPath.row] objectForKey:@"location"] objectForKey:@"lng"]];

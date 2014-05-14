@@ -25,6 +25,7 @@
 		BDDC6076187A9202005009ED /* ReplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6074187A9202005009ED /* ReplyViewController.xib */; };
 		BDDC6078187A9239005009ED /* ReplyViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */; };
 		BDFEE245187D3E5400F26A90 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C270A07619238FFC003255B6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C270A07519238FFC003255B6 /* FacebookSDK.framework */; };
 		DD2567891921AADA00CDDBD4 /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2567881921AADA00CDDBD4 /* RangeSlider.m */; };
 		DD2567931921B07700CDDBD4 /* bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678B1921B07700CDDBD4 /* bar-background.png */; };
 		DD2567941921B07700CDDBD4 /* bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD25678C1921B07700CDDBD4 /* bar-background@2x.png */; };
@@ -42,7 +43,6 @@
 		DD2567A91922072700CDDBD4 /* photoadd_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A11922072700CDDBD4 /* photoadd_frame@2x.png */; };
 		DD2567AA1922072700CDDBD4 /* photoplace_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A21922072700CDDBD4 /* photoplace_frame.png */; };
 		DD2567AB1922072700CDDBD4 /* photoplace_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2567A31922072700CDDBD4 /* photoplace_frame@2x.png */; };
-		DD5C60891917411000D8B1BE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5C60881917411000D8B1BE /* FacebookSDK.framework */; };
 		DD915E7A19225143000F8DA7 /* WebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD915E7919225143000F8DA7 /* WebClient.m */; };
 		DDB68FB9191DB531000BD37A /* ILikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB68FB7191DB531000BD37A /* ILikeViewController.m */; };
 		DDB68FBA191DB531000BD37A /* ILikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB68FB8191DB531000BD37A /* ILikeViewController.xib */; };
@@ -307,6 +307,7 @@
 		BDDC6077187A9239005009ED /* ReplyViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReplyViewController_iPhone4.xib; path = ReplyViewController/ReplyViewController_iPhone4.xib; sourceTree = "<group>"; };
 		BDFEE243187D3E5400F26A90 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		BDFEE244187D3E5400F26A90 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		C270A07519238FFC003255B6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DD2567871921AADA00CDDBD4 /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
 		DD2567881921AADA00CDDBD4 /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
 		DD25678B1921B07700CDDBD4 /* bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-background.png"; sourceTree = "<group>"; };
@@ -325,7 +326,6 @@
 		DD2567A11922072700CDDBD4 /* photoadd_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoadd_frame@2x.png"; sourceTree = "<group>"; };
 		DD2567A21922072700CDDBD4 /* photoplace_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoplace_frame.png; sourceTree = "<group>"; };
 		DD2567A31922072700CDDBD4 /* photoplace_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoplace_frame@2x.png"; sourceTree = "<group>"; };
-		DD5C60881917411000D8B1BE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DD915E7819225143000F8DA7 /* WebClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebClient.h; sourceTree = "<group>"; };
 		DD915E7919225143000F8DA7 /* WebClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebClient.m; sourceTree = "<group>"; };
 		DDB68FB6191DB531000BD37A /* ILikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILikeViewController.h; sourceTree = "<group>"; };
@@ -641,7 +641,7 @@
 				E40DC6C618E436E400B4CB32 /* GoogleMaps.framework in Frameworks */,
 				E41F04AD1851C0A500841146 /* AddressBook.framework in Frameworks */,
 				E4F14FC21850A97900307DF7 /* MapKit.framework in Frameworks */,
-				DD5C60891917411000D8B1BE /* FacebookSDK.framework in Frameworks */,
+				C270A07619238FFC003255B6 /* FacebookSDK.framework in Frameworks */,
 				E404A20E184D9C0E00193CF9 /* CoreGraphics.framework in Frameworks */,
 				E404A210184D9C0E00193CF9 /* UIKit.framework in Frameworks */,
 				E404A20C184D9C0E00193CF9 /* Foundation.framework in Frameworks */,
@@ -865,7 +865,7 @@
 		E404A20A184D9C0E00193CF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C60881917411000D8B1BE /* FacebookSDK.framework */,
+				C270A07519238FFC003255B6 /* FacebookSDK.framework */,
 				E409F5A018FD0FF500725238 /* Security.framework */,
 				E40DC6CB18E4382300B4CB32 /* CoreText.framework */,
 				E40DC6C918E4380900B4CB32 /* AVFoundation.framework */,
@@ -2007,11 +2007,12 @@
 					/Users/rakeshsaini/Documents/ANKUSH/Projects/AppStore/KeithDatingApp,
 					/Users/baljindersingh/Downloads/KeithDatingApp,
 					/Users/YangYang/Git/Fondoo,
+					/Users/Baljinder/Fondooapp,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeithDatingApp/KeithDatingApp-Prefix.pch";
 				INFOPLIST_FILE = "KeithDatingApp/KeithDatingApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flurry",
@@ -2048,11 +2049,12 @@
 					/Users/rakeshsaini/Documents/ANKUSH/Projects/AppStore/KeithDatingApp,
 					/Users/baljindersingh/Downloads/KeithDatingApp,
 					/Users/YangYang/Git/Fondoo,
+					/Users/Baljinder/Fondooapp,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeithDatingApp/KeithDatingApp-Prefix.pch";
 				INFOPLIST_FILE = "KeithDatingApp/KeithDatingApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flurry",

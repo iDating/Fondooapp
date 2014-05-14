@@ -363,6 +363,8 @@
     timeZone=[[NSTimeZone localTimeZone] name];
     NSString *body=[NSString stringWithFormat:@"%@%@%@%f%@%f%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kLatitudeString,self.m_Latitude,kLongitudeString,self.m_Longitude,kPageString,PageString,kTimeZoneString,timeZone];
     
+    NSLog(@"Feed Body is %@",body);
+    
   __strong  NSDictionary *ResultDict=[WebServiceAPIController executeAPIRequestForMethod:kGetPostMessages AndRequestBody:body];
 
     _pageNumber=[[ResultDict objectForKey:@"nextpage"] intValue];

@@ -45,14 +45,30 @@
     return self;
 }
 
+#pragma mark - Allocation of Arrays
+
+- (void)AllocateArrays
+{
+    m_ConversationArray=[[NSMutableArray alloc] init];
+    self.m_MybubbleData=[[NSBubbleData alloc] init];
+    self.m_OtherBubbleData=[[NSBubbleData alloc] init];
+}
+
+
+
+
+#pragma mark - View DidLoad Methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 //[self Addrefreshtable];
+    
+    
   //  [self addButton];
-    m_ConversationArray=[[NSMutableArray alloc] init];
-    self.m_MybubbleData=[[NSBubbleData alloc] init];
-    self.m_OtherBubbleData=[[NSBubbleData alloc] init];
+    
+    [self AllocateArrays];
+  
     isRefresh=NO;
     IsPageNumberSet=NO;
     isSuccess=YES;

@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
 
-    m_HeadingArray=[[NSArray alloc] initWithObjects:@"I like...",@"That live within",@"Within the age group",@"A bit about me", @"Bio", @"Edit Photos", nil];
+    m_HeadingArray=[[NSArray alloc] initWithObjects:@"I like...",@"That are Located Within",@"Age Range",@"A bit about me", @"Bio", @"Edit Photos", nil];
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"screen"]==568) {
          [self.m_SetupScrollView setContentSize:CGSizeMake(320*5, kBasicScrollHeight_iPhone5-100)];
     }
