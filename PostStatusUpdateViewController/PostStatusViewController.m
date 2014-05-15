@@ -88,8 +88,12 @@
 }
 
 
+
+
 - (IBAction)SendButtonClicked:(id)sender {
     [self.m_ActivityIndicatore startAnimating];
+    
+
    [self performSelector:@selector(startpost) withObject:nil afterDelay:1.0f];
 }
 
@@ -533,6 +537,7 @@
 #pragma UIActionsheet delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+     [self.m_TextView resignFirstResponder];
    
     switch (buttonIndex) {
         case 0:
@@ -638,7 +643,7 @@
 }
 -(void)postWithoutImage
 {
-      NSLog(@"llat lon : %@  %@",shared.m_FourSquareLongitude,shared.m_FourSquareLattitude);
+    
     if (self.m_TextView.text.length>0) {
         
     if (isCheckIn==NO) {
