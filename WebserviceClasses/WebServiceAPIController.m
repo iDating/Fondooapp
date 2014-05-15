@@ -35,7 +35,7 @@ static NSString* str = kFondooWebservice;
 + (NSDictionary *)executeAPIRequestForMethod:(NSString *)methodName AndRequestBody:(NSString *)requestBody 
 {
 	NSString *url_String = [[NSString stringWithFormat:@"%@%@%@",str,methodName,requestBody] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-   // NSLog(@"url : %@",url_String);
+    NSLog(@"url : %@",url_String);
     
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url_String]];
 

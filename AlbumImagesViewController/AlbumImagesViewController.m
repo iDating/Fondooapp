@@ -84,7 +84,7 @@ static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+
     [self dismissViewControllerAnimated:YES completion:^{
         AppDelegate *appDel=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         [appDel stopTimer];

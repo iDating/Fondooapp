@@ -1590,7 +1590,7 @@
 				ORGANIZATIONNAME = "Ankush Sharma";
 				TargetAttributes = {
 					E404A207184D9C0E00193CF9 = {
-						DevelopmentTeam = 376Y7CT3NK;
+						DevelopmentTeam = 9E4FPT7D96;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 1;
@@ -1991,7 +1991,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Amaneet Brar (V888ZRNJ39)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/3\\ \\ December\\ 2013/KeithDatingApp",
@@ -2021,7 +2021,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Fondoo;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15A4DCB7-FE1C-4F36-84EA-1581C00CCAF8";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2033,7 +2033,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Amaneet Brar (V888ZRNJ39)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Mohit/Documents/Ankush\\ Sharma/Ankush\\ Projects\\ /KeithDatingApp/3\\ \\ December\\ 2013/KeithDatingApp",
@@ -2063,7 +2063,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Fondoo;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15A4DCB7-FE1C-4F36-84EA-1581C00CCAF8";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
