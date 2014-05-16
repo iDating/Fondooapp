@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "UserDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 @interface CheckInUsersTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>

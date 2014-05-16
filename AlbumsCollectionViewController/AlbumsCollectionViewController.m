@@ -8,7 +8,7 @@
 
 #import "AlbumsCollectionViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "AlbumImagesViewController.h"
 static NSString * const PhotoCellIdentifier = @"PhotoCell";
 static NSString * const AlbumTitleIdentifier = @"AlbumTitle";

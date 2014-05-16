@@ -11,7 +11,7 @@
 #import "UIBubbleTableViewDataSource.h"
 #import "NSBubbleData.h"
 #import "WebServiceAPIController.h"
-#import "UIButton+WebCache.h"
+#import "UIButton+AFNetworking.h"
 
 @interface ConversationViewController ()
 {
@@ -73,7 +73,7 @@
         [[picButton imageView] setContentMode:UIViewContentModeScaleAspectFill];
         picButton.layer.cornerRadius=3.0f;
         picButton.clipsToBounds=YES;
-        [picButton setBackImageWithURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"] options:0];
+        [picButton setBackgroundImageForState:UIControlStateNormal withURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"]];
         [backView addSubview:picButton];
         UIBarButtonItem *rightButton=[[UIBarButtonItem alloc] initWithCustomView:backView];
         self.navigationItem.rightBarButtonItem=rightButton;
@@ -95,7 +95,7 @@
         [picButton setBackgroundColor:[UIColor clearColor]];
         picButton.layer.cornerRadius=3.0f;
         picButton.clipsToBounds=YES;
-        [picButton setBackImageWithURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"] options:0];
+        [picButton setBackgroundImageForState:UIControlStateNormal withURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"]];
         [backView addSubview:picButton];
         UIBarButtonItem *rightButton=[[UIBarButtonItem alloc] initWithCustomView:backView];
         self.navigationItem.rightBarButtonItem=rightButton;

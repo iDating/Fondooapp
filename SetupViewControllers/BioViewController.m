@@ -9,7 +9,7 @@
 #import "BioViewController.h"
 #import "ProfilePhotoViewController.h"
 
-#import "WebClient.h"
+#import "AFWebClient.h"
 
 @interface BioViewController ()
 
@@ -79,11 +79,9 @@
     NSString *valueUnicode = [[NSString alloc] initWithData:data11 encoding:NSUTF8StringEncoding];
     NSString *valueStr=[valueUnicode stringByReplacingOccurrencesOfString:@"\\" withString:@"-"];
     
-    
-    NSString *bodyString=[NSString stringWithFormat:@"%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kTagLineString,valueStr];
-    
-    WebClient *client = [WebClient sharedInstance];
-    [client sendDataFromSetupView:bodyString Method:kEditTagLine];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:valueStr, kTagLineParam, kEditTagLineValue, kMethodKey, nil];
+    AFWebClient *client = [AFWebClient sharedInstance];
+    [client requestFromSetupView:dict];
 }
 
 @end

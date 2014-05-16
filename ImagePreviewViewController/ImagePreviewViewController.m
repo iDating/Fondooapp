@@ -39,23 +39,24 @@
     //then need to add the gesture recogniser to a view - this will be the view that recognises the gesture
     [self.view addGestureRecognizer:tapOnce];
     [self.view addGestureRecognizer:tapTwice];
-    [self.m_ImageView setImageWithURL:[NSURL URLWithString:m_ImageUrl] placeholderImage:[UIImage imageNamed:@"PreviewFrame"] success:^(UIImage *image)
-     {
-         if (image) {
-             float widthRatio = self.m_ImageView.bounds.size.width / self.m_ImageView.image.size.width;
-             float heightRatio = self.m_ImageView.bounds.size.height / self.m_ImageView.image.size.height;
-             float scale = MIN(widthRatio, heightRatio);
-             float imageWidth = scale * self.m_ImageView.image.size.width;
-             float imageHeight = scale * self.m_ImageView.image.size.height;
-
-             self.m_ImageView.frame = CGRectMake(self.m_ImageView.frame.origin.x,(self.m_ImageView.frame.size.height-imageHeight)/2, imageWidth, imageHeight);
-             self.m_ImageView.center = self.m_ImageView.superview.center;
-         }
-     }failure:^(NSError *error)
-     {
-         
-     }];
-    
+    __block UIImageView * imageView = self.m_ImageView;
+    NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:m_ImageUrl]];
+    [self.m_ImageView setImageWithURLRequest:url_request placeholderImage:[UIImage imageNamed:@"PreviewFrame"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        if (image) {
+            float widthRatio = self.m_ImageView.bounds.size.width / self.m_ImageView.image.size.width;
+            float heightRatio = self.m_ImageView.bounds.size.height / self.m_ImageView.image.size.height;
+            float scale = MIN(widthRatio, heightRatio);
+            float imageWidth = scale * self.m_ImageView.image.size.width;
+            float imageHeight = scale * self.m_ImageView.image.size.height;
+            
+            self.m_ImageView.frame = CGRectMake(self.m_ImageView.frame.origin.x,(self.m_ImageView.frame.size.height-imageHeight)/2, imageWidth, imageHeight);
+            self.m_ImageView.center = self.m_ImageView.superview.center;
+            
+            [imageView setImage:image];
+        }
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 

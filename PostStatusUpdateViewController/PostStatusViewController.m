@@ -7,7 +7,7 @@
 //
 
 #import "PostStatusViewController.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "AppDelegate.h"
 #import "SharedClass.h"
 #import <QuartzCore/QuartzCore.h>

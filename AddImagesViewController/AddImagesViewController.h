@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIButton+WebCache.h"
-#import "UIImageView+WebCache.h"
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import "WebServiceAPIController.h"
 #import "AlbumImagesViewController.h"
 #import "AlbumsCollectionViewController.h"

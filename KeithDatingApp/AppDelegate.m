@@ -288,11 +288,6 @@ acctNav.tabBarItem.imageInsets=UIEdgeInsetsMake(5, 0, -5, 0);
 
 -(void)initializeBasicSetup
 {
-//    BasicSetupViewController *vc = [[BasicSetupViewController alloc] initWithNibName:@"BasicSetupViewController_iPhone4" bundle:nil];
-//    self.window.rootViewController = vc;
-//    
-//    return;
-    
     ILikeViewController *iLikeVC = [[ILikeViewController alloc] initWithNibName:@"ILikeViewController" bundle:nil];
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:iLikeVC];
     self.window.rootViewController = navigationVC;

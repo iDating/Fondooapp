@@ -9,7 +9,7 @@
 #import "LiveWithinViewController.h"
 
 #import "AgeGroupViewController.h"
-#import "WebClient.h"
+#import "AFWebClient.h"
 
 @interface LiveWithinViewController ()
 
@@ -87,10 +87,10 @@
     
     int livein[] = {5, 10, 30, 50, 70, 90};
     NSString *stringData = [NSString stringWithFormat:@"%d", livein[selectedIndex]];
-    NSString *bodyString=[NSString stringWithFormat:@"%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kRadiusString,stringData];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:stringData, kRadiusParam, kEditRadiusValue, kMethodKey, nil];
     
-    WebClient *webClient = [WebClient sharedInstance];
-    [webClient sendDataFromSetupView:bodyString Method:kEditRadius];
+    AFWebClient *afWebClient = [AFWebClient sharedInstance];
+    [afWebClient requestFromSetupView:dict];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MessageViewController.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "ConversationViewController.h"
 #import "PostStatusViewController.h"
 @interface MessageViewController ()
@@ -132,7 +132,7 @@
         profileImage.clipsToBounds=YES;
         [profileImage.layer setMasksToBounds:YES];
         [profileImage setUserInteractionEnabled:YES];
-        [profileImage setBackImageWithURL:[NSURL URLWithString:[[self.m_MessagesArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"PreviewFrame"] options:0];
+        [profileImage setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:[[self.m_MessagesArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"PreviewFrame"]];
         profileImage.tag=indexPath.row;
         [profileImage addTarget:self action:@selector(profileButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
        

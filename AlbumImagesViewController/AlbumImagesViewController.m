@@ -8,9 +8,11 @@
 
 #import "AlbumImagesViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "WebServiceAPIController.h"
 #import "SharedClass.h"
+#import "AFWebClient.h"
+
 static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
 @interface AlbumImagesViewController ()
 {
@@ -34,6 +36,9 @@ static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.dictAlbumImages = [NSMutableDictionary dictionary];
+    
     data=[SharedClass sharedInstance];
   
     self.m_ActivityIndicator=[[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 37, 37)];
@@ -82,20 +87,43 @@ static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
 {
     return 1;
 }
+
+- (NSString *) keyString:(int)i
+{
+    return [NSString stringWithFormat:@"key%d", i];
+}
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:^{
         AppDelegate *appDel=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         [appDel stopTimer];
-    NSData *imageData=[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[[[self.m_FacebookAlbumImages objectAtIndex:indexPath.section] objectForKey:@"images"] objectAtIndex:0] objectForKey:@"source"]]]];
-      //  [self editImages:[self uploadimage:imageData]];
-        [self editImages:[self uploadJPEGImage:kImageUploadFondooPhpFile image:imageData]];
+//        NSData *imageData=[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[[[self.m_FacebookAlbumImages objectAtIndex:indexPath.section] objectForKey:@"images"] objectAtIndex:0] objectForKey:@"source"]]]];
+        UIImage *image = [self.dictAlbumImages objectForKey:[self keyString:indexPath.section]];
+        NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString * documentDirectory = [paths objectAtIndex:0];
+        NSString *file_name = [NSString stringWithFormat:@"profile%@.jpg", data.m_ImageNumber];
+        NSString *full_name = [documentDirectory stringByAppendingPathComponent:file_name];
+        [imageData writeToFile:full_name atomically:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"setImage" object:nil userInfo:nil];
         [appDel startTimer];
+        [self performSelectorInBackground:@selector(updateImageInBackground:) withObject:imageData];
     }];
-    
-
 }
+
+- (void) updateImageInBackground:(NSData *)imageData
+{
+    NSString *image = [self uploadJPEGImage:kImageUploadFondooPhpFile image:imageData];
+    [self updateImage:image];
+}
+
+- (void) uploadProfileImage:(NSData *)image_data
+{
+    AFWebClient *client = [AFWebClient sharedInstance];
+    [client uploadImage:image_data];
+}
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AlbumImagesCustomCell *customCell=(AlbumImagesCustomCell*)[collectionView dequeueReusableCellWithReuseIdentifier:AlbumImageCellIdentifier forIndexPath:indexPath];
@@ -107,7 +135,19 @@ static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
     }
     
     if ([self.m_FacebookAlbumImages count]!=0) {
-          [customCell.m_ImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[[[self.m_FacebookAlbumImages objectAtIndex:indexPath.section] objectForKey:@"images"] objectAtIndex:0] objectForKey:@"source"]]]];
+        NSString *url_string = [[[[self.m_FacebookAlbumImages objectAtIndex:indexPath.section] objectForKey:@"images"] objectAtIndex:0] objectForKey:@"source"];
+        NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:url_string]];
+        
+        __block UIImageView * imageView = customCell.m_ImageView;
+        [customCell.m_ImageView setImageWithURLRequest:url_request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            if (image)
+            {
+                [self.dictAlbumImages setObject:image forKey:[self keyString:indexPath.section]];
+                [imageView setImage:image];
+            }
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            [self.dictAlbumImages removeObjectForKey:[self keyString:indexPath.section]];
+        }];
     }
     return customCell;
 }
@@ -209,6 +249,22 @@ static NSString *AlbumImageCellIdentifier  =@"AlbumImage";
     NSLog(@"Return Data : %@",returnString);
         return urlString;
     // Extract the imageurl
+}
+
+-(void) updateImage:(NSString *)urlString
+{
+    data=[SharedClass sharedInstance];
+    NSString *img_key = [NSString stringWithFormat:@"img%@", data.m_ImageNumber];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:urlString, img_key, kEditUserProfileValue, kMethodKey, nil];
+    
+    AFWebClient *webClient = [AFWebClient sharedInstance];
+    [webClient requestFromSetupView:dict completion:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *resultDict = responseObject;
+        [data setM_TempImageUrl:urlString];
+        [[NSUserDefaults standardUserDefaults] setObject:resultDict forKey:@"userinfo"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"imageEdit" object:nil];
+    }];
 }
 
 -(void)editImages:(NSString*)urlString

@@ -8,12 +8,14 @@
 
 #import "ProfilePhotoViewController.h"
 
-#import "UIButton+WebCache.h"
-#import "UIImageView+WebCache.h"
+//#import "UIButton+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "WebServiceAPIController.h"
 #import "AlbumImagesViewController.h"
 #import "AlbumsCollectionViewController.h"
 #import "SharedClass.h"
+
+#import "UIImageView+AFNetworking.h"
 
 @interface ProfilePhotoViewController ()
 {
@@ -130,8 +132,17 @@
             [btn setBackgroundImage:[UIImage imageNamed:@"photo_frame"] forState:UIControlStateNormal];
             deleteButton.hidden = NO;
             UIImageView *img = [self.arrPhotoView objectAtIndex:i];
-            [img setImage:nil];
-            [img setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[self.imagesDictionary objectForKey:[NSString stringWithFormat:@"image%i",i]] objectForKey:@"url"]]] placeholderImage:[UIImage imageNamed:@"PrieviewImage"]];
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString * documentDirectory = [paths objectAtIndex:0];
+            NSString *file_name = [NSString stringWithFormat:@"profile%d.jpg", i + 1];
+            NSString *full_name = [documentDirectory stringByAppendingPathComponent:file_name];
+            UIImage *img_local = [UIImage imageWithContentsOfFile:full_name];
+            if (!img_local)
+            {
+                [img setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[self.imagesDictionary objectForKey:[NSString stringWithFormat:@"image%i",i]] objectForKey:@"url"]]] placeholderImage:[UIImage imageNamed:@"PrieviewImage"]];
+            }
+            else
+                [img setImage:img_local];
         }
         else
         {
@@ -168,13 +179,19 @@
     
     UINavigationController *navBar=[[UINavigationController alloc] initWithRootViewController:albumVC];
     [self presentViewController:navBar animated:YES completion:nil];
-    
 }
 
 - (IBAction) deleteImage:(id)sender
 {
     UIButton *btn=(UIButton*)sender;
     int ix = [self.arrDeleteButton indexOfObject:btn];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentDirectory = [paths objectAtIndex:0];
+    NSString *file_name = [NSString stringWithFormat:@"profile%d.jpg", ix + 1];
+    NSString *full_name = [documentDirectory stringByAppendingPathComponent:file_name];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    [fm removeItemAtPath:full_name error:nil];
     
     [self.activityIndicator startAnimating];
     NSString *body=[NSString stringWithFormat:@"%@%@&img%i",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"], ix + 1];

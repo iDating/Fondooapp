@@ -7,7 +7,7 @@
 //
 
 #import "MapViewController.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "AsyncImageView.h"
 @interface MapViewController ()
 
@@ -259,15 +259,8 @@ didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
         [imageview setBackgroundColor:[UIColor lightGrayColor]];
          [imageview setFrame:CGRectMake(7, 7, 45, 45)];
     imageview.image=[UIImage imageNamed:@"FoursquareLogo"];
-    [imageview setImageWithURL:[NSURL URLWithString:[[PlacesDict objectAtIndex:0] objectForKey:@"image"]] success:^(UIImage *image)
-     {
-     
-
-     }failure:^(NSError *error)
-     {
-         
-     }];
-      UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(60, 8, 130, 18)];
+    [imageview setImageWithURL:[NSURL URLWithString:[[PlacesDict objectAtIndex:0] objectForKey:@"image"]]];
+    UILabel *nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(60, 8, 130, 18)];
         [nameLabel setNumberOfLines:0];
       nameLabel.adjustsFontSizeToFitWidth=YES;
     

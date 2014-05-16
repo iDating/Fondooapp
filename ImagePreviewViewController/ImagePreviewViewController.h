@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 @interface ImagePreviewViewController : UIViewController<UIScrollViewDelegate>
 - (IBAction)closeButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *m_ImageView;

@@ -15,4 +15,7 @@
 @property(nonatomic,strong)NSMutableArray *m_FacebookAlbumImages;
 @property(nonatomic,strong)UIActivityIndicatorView *m_ActivityIndicator;
 @property(strong,nonatomic)NSString *m_ImageNumber;
+
+@property (nonatomic, retain) NSMutableDictionary * dictAlbumImages;
+
 @end

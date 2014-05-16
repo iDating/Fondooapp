@@ -10,7 +10,7 @@
 
 #import "CustomUIPageControl.h"
 #import "WebServiceAPIController.h"
-#import "UIButton+WebCache.h"
+#import "UIButton+AFNetworking.h"
 #import "ImagePreviewViewController.h"
 @interface UserDetailsViewController : UIViewController<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
 

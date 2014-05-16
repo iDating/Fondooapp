@@ -7,7 +7,7 @@
 //
 
 #import "AccountViewController.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "SharedClass.h"
 #import "AccountSettingsViewController.h"
 @interface AccountViewController ()
@@ -136,14 +136,16 @@ self.navigationItem.rightBarButtonItem=rightBar;
         [actIndicator startAnimating];
         
        // [ImageButton setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",image]] placeholderImage:[UIImage imageNamed:@"nopreview"]];
-        [ImageButton setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",image]] placeholderImage:[UIImage imageNamed:@"nopreview"] success:^(UIImage *image){
+        NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",image]]];
+        __block UIImageView * imageView = ImageButton;
+        [ImageButton setImageWithURLRequest:url_request placeholderImage:[UIImage imageNamed:@"nopreview"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             if (image) {
+                [imageView setImage:image];
                 [actIndicator stopAnimating];
             }
-        }failure:^(NSError *error)
-         {
-                [actIndicator stopAnimating];
-         }];
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            [actIndicator stopAnimating];
+        }];
         ImageButton.frame = CGRectMake(320*tag, 0, 320, kImageHeight4);
         ImageButton.tag = tag;
         tag++;

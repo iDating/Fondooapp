@@ -11,7 +11,7 @@
 #import "CommonClass.h"
 
 #import "LiveWithinViewController.h"
-#import "WebClient.h"
+#import "AFWebClient.h"
 
 @interface ILikeViewController ()
 
@@ -74,10 +74,10 @@
     [self toUserSettings];
     
     NSString *stringPerson = self.chkLikeMen.selected ? @"Man" : @"WoMan";
-    NSString *bodyString=[NSString stringWithFormat:@"%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kGenderString,stringPerson];
-
-    WebClient *webClient = [WebClient sharedInstance];
-    [webClient sendDataFromSetupView:bodyString Method:kEditGender];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:stringPerson, kGenderParam, kEditGenderValue, kMethodKey, nil];
+    
+    AFWebClient *afWebClient = [AFWebClient sharedInstance];
+    [afWebClient requestFromSetupView:dict];
 }
 
 

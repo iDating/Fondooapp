@@ -9,8 +9,8 @@
 #import "FeedViewController.h"
 #import "PostStatusViewController.h"
 #import "AppDelegate.h"
-#import "UIButton+WebCache.h"
-#import "UIImageView+WebCache.h"
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SharedClass.h"
 #import "EGORefreshTableHeaderView.h"
@@ -64,7 +64,7 @@
 }
 - (void)setnavigationbar
 {
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kRedColor,NSForegroundColorAttributeName,nil]];
+//    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kRedColor,NSForegroundColorAttributeName,nil]];
     UIButton *rightButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 5, 25, 25)];
     [rightButton setBackgroundImage:[UIImage imageNamed:@"Add_Button"] forState:UIControlStateNormal];
     [rightButton setBackgroundColor:[UIColor clearColor]];
@@ -195,7 +195,7 @@
               // [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         cell.m_TimeLabel.text=[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"posted_on"];
         [cell.m_LocationButton setTitle:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"address"] forState:UIControlStateNormal];
-        [cell.m_UserProfileImage setBackImageWithURL:[NSURL URLWithString:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"ProfileImageFrame"] options:0];
+        [cell.m_UserProfileImage setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"ProfileImageFrame"]];
         [cell.m_UserProfileImage addTarget:self action:@selector(profileClicked:) forControlEvents:UIControlEventTouchUpInside];
         [cell.m_UserProfileImage setTag:indexPath.row];
         cell.m_UserProfileImage.imageView.contentMode=UIViewContentModeScaleAspectFill;
@@ -228,13 +228,15 @@
      [cell.m_DisplayView setHidden:NO];
            
             [cell.m_indicator startAnimating];
-            [cell.m_PostImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"image"]]] placeholderImage:nil
-                                          success:^(UIImage *image) {
-                                              if (image) {
-                                                  [cell.m_indicator stopAnimating];
-                                                  cell.m_indicator.hidden=YES;
-                                              }
-                                          }failure:nil];
+            NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"image"]]]];
+            __block UIImageView * imageView = cell.m_PostImageView;
+            [cell.m_PostImageView setImageWithURLRequest:url_request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                if (image) {
+                    [cell.m_indicator stopAnimating];
+                    cell.m_indicator.hidden=YES;
+                    [imageView setImage:image];
+                }
+            } failure:nil];
             
             [cell.m_DisplayView    setFrame:CGRectMake(0, paragraphRect.size.height+70, 295, 137)];
             [cell.m_LocationView  setFrame:CGRectMake(3,205+paragraphRect.size.height , 275, 29)];
@@ -244,15 +246,15 @@
  else {
     [cell.m_DisplayView setHidden:NO];
      [cell.m_indicator startAnimating];
-     [cell.m_PostImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"image"]]] placeholderImage:nil
-                            success:^(UIImage *image) {
-                                if (image) {
-                                    [cell.m_indicator stopAnimating];
-                                   cell.m_indicator.hidden=YES;
-                                }
-                            }failure:nil];
-     
-            
+     NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[self.m_FeedsArray objectAtIndex:indexPath.row]]]];
+     __block UIImageView * imageView = cell.m_PostImageView;
+     [cell.m_PostImageView setImageWithURLRequest:url_request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+         if (image) {
+             [cell.m_indicator stopAnimating];
+             cell.m_indicator.hidden=YES;
+             [imageView setImage:image];
+         }
+     } failure:nil];
           [cell.m_DisplayView    setFrame:CGRectMake(0, paragraphRect.size.height+70, 295, 137)];
               [cell.m_view         setFrame:CGRectMake(13, 7, 295, 240+paragraphRect.size.height)];
             [cell.m_LocationView  setFrame:CGRectMake(3,205+paragraphRect.size.height , 275, 29)];

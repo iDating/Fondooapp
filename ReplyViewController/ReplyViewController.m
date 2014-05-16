@@ -9,8 +9,8 @@
 #import "ReplyViewController.h"
 #import "WebServiceAPIController.h"
 
-#import "UIButton+WebCache.h"
-#import "UIImageView+WebCache.h"
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import "UserDetailsViewController.h"
 @interface ReplyViewController ()
 
@@ -120,16 +120,16 @@
     }
     else {
         
-                    [self.m_ActivityIndicator startAnimating];
-       [self.m_ImageButton  setImageWithURL:[NSURL URLWithString:[m_PostDictionary objectForKey:@"image"]] placeholderImage:nil
-                                      success:^(UIImage *image) {
-                                          if (image) {
-                                            
-                                              [self.m_ActivityIndicator stopAnimating];
-                                              self.m_ActivityIndicator.hidden=YES;
-                                          }
-                                      }failure:nil];
-     
+        [self.m_ActivityIndicator startAnimating];
+        __block UIImageView * imageView = self.m_ImageButton;
+        NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:[m_PostDictionary objectForKey:@"image"]]];
+        [self.m_ImageButton setImageWithURLRequest:url_request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            if (image) {
+                [self.m_ActivityIndicator stopAnimating];
+                self.m_ActivityIndicator.hidden=YES;
+                [imageView setImage:image];
+            }
+        } failure:nil];
        // [self.m_ImageButton setImageWithURL:[NSURL URLWithString:[m_PostDictionary objectForKey:@"image"]] placeholderImage:nil];
         UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openImage:)];
         tapGesture.numberOfTapsRequired=1;

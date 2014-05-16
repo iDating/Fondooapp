@@ -9,7 +9,7 @@
 #import "AgeGroupViewController.h"
 
 #import "BioViewController.h"
-#import "WebClient.h"
+#import "AFWebClient.h"
 
 @interface AgeGroupViewController ()
 
@@ -113,11 +113,9 @@
     [self toUserSettings];
     
     NSString *ageString=[[NSString stringWithFormat:@"%@-",self.minLabel.text ] stringByAppendingString:self.maxLabel.text];
-    
-    NSString *bodyString=[NSString stringWithFormat:@"%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kAgeString, ageString];
-    
-    WebClient *client = [WebClient sharedInstance];
-    [client sendDataFromSetupView:bodyString Method:kEditAge];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:ageString, kAgeParam, kEditAgeValue, kMethodKey, nil];
+    AFWebClient *webClient = [AFWebClient sharedInstance];
+    [webClient requestFromSetupView:dict];
 }
 
 @end
