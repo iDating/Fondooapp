@@ -86,7 +86,7 @@ UIView *backView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 44)];
     [[picButton imageView] setContentMode:UIViewContentModeScaleAspectFill];
     picButton.layer.cornerRadius=3.0f;
     picButton.clipsToBounds=YES;
-    [picButton setBackImageWithURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"] options:0];
+    [picButton setBackgroundImageForState:UIControlStateNormal withURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"]];
     [backView addSubview:picButton];
     UIBarButtonItem *rightButton=[[UIBarButtonItem alloc] initWithCustomView:backView];
     self.navigationItem.rightBarButtonItem=rightButton;
