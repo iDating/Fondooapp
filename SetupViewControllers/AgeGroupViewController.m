@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Within the age group";
+    self.title = @"Age Range";
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(onBack)];
     backItem.tintColor = kDarkGrayColor;
     self.navigationItem.leftBarButtonItem = backItem;

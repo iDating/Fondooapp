@@ -32,26 +32,44 @@
     return self;
 }
 
-- (void)viewDidLoad
+
+#pragma mark - Custom Methods
+
+- (void)Setuptableview
 {
-    [super viewDidLoad];
-     [self.m_ActivityIndicator startAnimating];
-    self.m_Appdel=(AppDelegate*)[[UIApplication sharedApplication] delegate];
-    _pageNumber=0;
- //   [self getMessages];
     self.m_MessageTable.layer.shadowColor = [UIColor darkGrayColor].CGColor;
     self.m_MessageTable.layer.shadowOffset = CGSizeMake(0, 1);
     self.m_MessageTable.layer.shadowOpacity = 1;
     self.m_MessageTable.layer.shadowRadius = 1.0;
     self.m_MessageTable.clipsToBounds = NO;
-     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kRedColor,NSForegroundColorAttributeName,nil]];
+}
+
+-(void)Setupnavigationcontroller
+{
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kRedColor,NSForegroundColorAttributeName,nil]];
     UIButton *rightButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 5, 25, 25)];
     [rightButton setBackgroundImage:[UIImage imageNamed:@"Add_Button"] forState:UIControlStateNormal];
     [rightButton setBackgroundColor:[UIColor clearColor]];
     [rightButton addTarget:self action:@selector(rightBarButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    
     UIBarButtonItem *rightBar=[[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem=rightBar;
+    
+}
+
+#pragma mark - View Did Load Method
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+     [self.m_ActivityIndicator startAnimating];
+    
+    self.m_Appdel=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+    _pageNumber=0;
+    
+    [self Setuptableview];
+    [self Setupnavigationcontroller];
+    
+  
         // Do any additional setup after loading the view from its nib.
 }
 -(void)startTimer
@@ -63,6 +81,8 @@
     }
    
 }
+
+
 -(void)rightBarButtonClicked
 {
     PostStatusViewController *postVC;
@@ -226,11 +246,15 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
 
     _pageNumber=0;
+        
         NSString *timeZone=[[NSTimeZone localTimeZone] name];
+        
     NSString *body=[NSString stringWithFormat:@"%@%@%@%@",kAuthKeyString,[[[[[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"] objectForKey:@"data"] objectForKey:@"userDetails"]objectForKey:@"auth_key"],kTimeZoneString,timeZone];
    
     NSDictionary *dict=[WebServiceAPIController executeAPIRequestForMethod:kGetAllLatestMessages AndRequestBody:body];
+        
     if ([[dict objectForKey:@"return"] intValue]==1) {
+        
         m_MessagesArray=[[NSMutableArray alloc] initWithArray:[dict objectForKey:@"data"]];
                dispatch_async(dispatch_get_main_queue(), ^{
                    [self.m_ActivityIndicator stopAnimating];
@@ -251,6 +275,7 @@
                    }
                
             [self.m_MessageTable reloadData];
+                    [self.m_ActivityIndicator stopAnimating];
         });
     }
     else

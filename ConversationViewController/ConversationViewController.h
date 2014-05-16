@@ -23,6 +23,7 @@
 @property(strong,nonatomic)NSBubbleData *m_OtherBubbleData;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *m_ActivityIndicator;
 @property(weak,nonatomic)NSTimer *m_MessageTimer;
+@property (weak,nonatomic)NSString* m_Body;
 @property(nonatomic)BOOL isFirst;
 @property(nonatomic)BOOL isChecked;
 @property(nonatomic)BOOL isSuccess;
@@ -34,6 +35,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *m_TextView;
 @property(strong,nonatomic)UIActivityIndicatorView *m_MessageLoadingView;
 @property (weak, nonatomic) IBOutlet UITextView *m_MessageTextView;
+
 -(void)StartTimerForConversation;
 -(void)stopTimerForConversation;
+- (void)Sendmessage:(NSString*)body;
+- (void)Initiatemessage;
 @end
