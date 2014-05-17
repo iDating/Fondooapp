@@ -172,7 +172,7 @@ UIView *backView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 44)];
     [self.view addGestureRecognizer:tapGesture];
     [self.m_ActivityIndicator startAnimating];
     [self StartTimerForConversation];
-   
+   //
     
     }
 
