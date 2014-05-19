@@ -118,50 +118,7 @@ UIView *backView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 44)];
     UIView *backView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 44)];
     [backView setBackgroundColor:[UIColor clearColor]];
    // _refreshHeaderView.hidden=YES;
-    if (isChecked) {
-        
-        UIButton *picButton=[[UIButton alloc] initWithFrame:CGRectMake(15, 5, 35, 35)];
-        [picButton addTarget:self action:@selector(profileClicked) forControlEvents:UIControlEventTouchUpInside];
-        [picButton setBackgroundColor:[UIColor clearColor]];
-        [[picButton imageView] setContentMode:UIViewContentModeScaleAspectFill];
-        picButton.layer.cornerRadius=3.0f;
-        picButton.clipsToBounds=YES;
-        [picButton setBackgroundImageForState:UIControlStateNormal withURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"]];
-        [backView addSubview:picButton];
-        UIBarButtonItem *rightButton=[[UIBarButtonItem alloc] initWithCustomView:backView];
-        self.navigationItem.rightBarButtonItem=rightButton;
-        
-        UIButton *Namebtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-        [Namebtn setBackgroundColor:[UIColor clearColor]];
-         Namebtn.titleLabel.font=[UIFont boldSystemFontOfSize:17.0f];
-        [Namebtn addTarget:self action:@selector(profileClicked) forControlEvents:UIControlEventTouchUpInside];
-        [Namebtn setTitleColor:kRedColor forState:UIControlStateNormal];
-        [Namebtn setTitle:[NSString stringWithFormat:@"%@, %@",[self.m_userInfo objectForKey:@"first_name"],[self.m_userInfo objectForKey:@"age"]] forState:UIControlStateNormal];
-
-         self.navigationItem.titleView=Namebtn;
-    }
-    else
-    {
-        
-        UIButton *picButton=[[UIButton alloc] initWithFrame:CGRectMake(15, 5, 35, 35)];
-         [picButton addTarget:self action:@selector(profileClicked) forControlEvents:UIControlEventTouchUpInside];
-        [picButton setBackgroundColor:[UIColor clearColor]];
-        picButton.layer.cornerRadius=3.0f;
-        picButton.clipsToBounds=YES;
-        [picButton setBackgroundImageForState:UIControlStateNormal withURL:[self.m_userInfo objectForKey:@"userimage"] placeholderImage:[UIImage imageNamed:@"No preview"]];
-        [backView addSubview:picButton];
-        UIBarButtonItem *rightButton=[[UIBarButtonItem alloc] initWithCustomView:backView];
-        self.navigationItem.rightBarButtonItem=rightButton;
-        UIButton *Namebtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-        [Namebtn setBackgroundColor:[UIColor clearColor]];
-           Namebtn.titleLabel.font=[UIFont boldSystemFontOfSize:17.0f];
-        [Namebtn addTarget:self action:@selector(profileClicked) forControlEvents:UIControlEventTouchUpInside];
-        [Namebtn setTitleColor:kRedColor forState:UIControlStateNormal];
-        [Namebtn setTitle:[NSString stringWithFormat:@"%@, %@",[self.m_userInfo objectForKey:@"first_name"],[self.m_userInfo objectForKey:@"age"]] forState:UIControlStateNormal];
-
-        self.navigationItem.titleView=Namebtn;
-    }
-
+  
     [self Setupheaderpic];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
