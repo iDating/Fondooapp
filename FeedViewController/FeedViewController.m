@@ -195,7 +195,7 @@
               // [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         cell.m_TimeLabel.text=[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"posted_on"];
         [cell.m_LocationButton setTitle:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"address"] forState:UIControlStateNormal];
-        [cell.m_UserProfileImage setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"ProfileImageFrame"]];
+        [cell.m_UserProfileImage.imageView setImageWithURL:[NSURL URLWithString:[[self.m_FeedsArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"ProfileImageFrame"]];
         [cell.m_UserProfileImage addTarget:self action:@selector(profileClicked:) forControlEvents:UIControlEventTouchUpInside];
         [cell.m_UserProfileImage setTag:indexPath.row];
         cell.m_UserProfileImage.imageView.contentMode=UIViewContentModeScaleAspectFill;
