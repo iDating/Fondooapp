@@ -147,12 +147,15 @@
     if (self.m_MessagesArray.count>0) {
         
         UIButton *profileImage=[[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
-        profileImage.imageView.contentMode=UIViewContentModeScaleAspectFill;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        [profileImage addSubview:imageView];
+        profileImage.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         profileImage.layer.cornerRadius=3.0f;
         profileImage.clipsToBounds=YES;
         [profileImage.layer setMasksToBounds:YES];
         [profileImage setUserInteractionEnabled:YES];
-        [profileImage setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:[[self.m_MessagesArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]] placeholderImage:[UIImage imageNamed:@"PreviewFrame"]];
+        [imageView setImageWithURL:[NSURL URLWithString:[[self.m_MessagesArray objectAtIndex:indexPath.row] objectForKey:@"userimage"]]  placeholderImage:[UIImage imageNamed:@"PreviewFrame"]];
         profileImage.tag=indexPath.row;
         [profileImage addTarget:self action:@selector(profileButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
        

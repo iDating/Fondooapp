@@ -43,11 +43,11 @@
     NSURLRequest *url_request = [NSURLRequest requestWithURL:[NSURL URLWithString:m_ImageUrl]];
     [self.m_ImageView setImageWithURLRequest:url_request placeholderImage:[UIImage imageNamed:@"PreviewFrame"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (image) {
-            float widthRatio = self.m_ImageView.bounds.size.width / self.m_ImageView.image.size.width;
-            float heightRatio = self.m_ImageView.bounds.size.height / self.m_ImageView.image.size.height;
+            float widthRatio = imageView.bounds.size.width / image.size.width;
+            float heightRatio = imageView.bounds.size.height / image.size.height;
             float scale = MIN(widthRatio, heightRatio);
-            float imageWidth = scale * self.m_ImageView.image.size.width;
-            float imageHeight = scale * self.m_ImageView.image.size.height;
+            float imageWidth = scale * image.size.width;
+            float imageHeight = scale * image.size.height;
             
             self.m_ImageView.frame = CGRectMake(self.m_ImageView.frame.origin.x,(self.m_ImageView.frame.size.height-imageHeight)/2, imageWidth, imageHeight);
             self.m_ImageView.center = self.m_ImageView.superview.center;
