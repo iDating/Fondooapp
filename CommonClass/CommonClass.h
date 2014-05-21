@@ -76,7 +76,6 @@
 #define kEditAge @"method=editAge"
 #define kGetBlockedUsers @"method="
 
-
 #define kPostMessageMethodValue             @"pushMessages"
 #define kGetUserDetailsValue                @"getUserDetails"
 #define kEditUserDetailsValue               @"setUserDetails"

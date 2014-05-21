@@ -153,14 +153,23 @@ static char kAFBackgroundImageRequestOperationKey;
     self.af_backgroundImageRequestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     [self.af_backgroundImageRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if ([[urlRequest URL] isEqual:[operation.request URL]]) {
-            if (success) {
+        if ([[urlRequest URL] isEqual:[operation.request URL]])
+        {
+            UIImage *image = [UIImage imageWithData:operation.responseData];
+            if (image)
+                [strongSelf setBackgroundImage:image forState:UIControlStateNormal];
+            if (success)
+            {
                 success(operation.response, responseObject);
-            } else if (responseObject) {
+            }
+            else if (responseObject)
+            {
                 [strongSelf setBackgroundImage:responseObject forState:state];
             }
-        } else {
-
+        }
+        else
+        {
+            
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if ([[urlRequest URL] isEqual:[operation.response URL]]) {
